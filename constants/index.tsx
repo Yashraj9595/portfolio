@@ -130,7 +130,7 @@ export const mySkills = [
   },
 ] as const;
 
-export const languages = ["js", "html", "css", "typescript", "react", "next", "node", "mongodb", "docker", "linux", "nginx", "tailwindcss", "git", "github"] as const;
+export const languages = ["cpp", "py", "js", "html", "css", "typescript", "react", "next", "node", "mongodb", "docker", "linux", "nginx", "tailwindcss", "git", "github"] as const;
 
 export const dsaBlogConfig: DSABlogConfigsType = {
   cpp: cppBlogConfig,
