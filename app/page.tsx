@@ -12,8 +12,11 @@ import { MdOutlineArrowCircleRight } from "react-icons/md";
 import { WebIcon } from "@/components/icons/web";
 import { MobileIcon } from "@/components/icons/mobile";
 import { CodeIcon } from "@/components/icons/code";
+import { DatabaseIcon } from "@/components/icons/database";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { IoMailOutline } from "react-icons/io5";
 import { ProjectCard } from "@/components/kico/ui/project-card";
 import { ButtonLink } from "@/components/kico/ui/button-link";
 
@@ -41,9 +44,9 @@ const Home = () => {
           <UniversAnimation />
           <div className="pb-10 md:pb-0 relative md:p-6 md:mt-10">
             <Heading
-              title="Hi, I'am Krishna Mungase"
-              tag="welcome to my portfolio"
-              text="I specialize in creating engaging and user-friendly websites that leave a lasting impression."
+              title="Hi, I'am Yashraj Jagtap"
+              tag="Full Stack Web Developer"
+              text="Computer Engineering student and Full Stack Web Developer with experience building production-ready web applications and SaaS platforms."
               className="mb-6 lg:mb-8"
               underline
             />
@@ -51,43 +54,11 @@ const Home = () => {
             <BlurEffect />
           </div>
 
-          <div className="md:flex items-center flex-col space-y-8 md:flex-row md:space-y-0 gap-8 pt-20">
-            <div className="glass-effect overflow-hidden">
-              <Image
-                src={"/assets/leetcode_k.png"}
-                className="border rounded-2xl p-3 bg-[#17171E]"
-                width={900}
-                height={100}
-                alt="AI"
-              />
-            </div>
-
-            <div className="relative md:flex items-center justify-center flex-col glass-effect border-none p-10">
-              <BlurEffect />
-
-              <Heading
-                tag="CP"
-                title="Competitive Programming Profile"
-                className="mb-0 lg:mb-0"
-              />
-
-              <Link
-                href={siteConfig.links.codolio}
-                className={cn(
-                  "flex items-center space-x-4 mt-8",
-                  buttonVariants()
-                )}
-              >
-                <span>Coding Profile</span>
-                <MdOutlineArrowCircleRight />
-              </Link>
-            </div>
-          </div>
         </div>
       </Section>
 
       {/* about  */}
-      <Section crosses topBorder>
+      <Section id="about" crosses topBorder>
         <LightBGAnimation className="absolute left-0" />
         <LightBGAnimation className="absolute right-0" />
         <BlurEffect />
@@ -98,8 +69,8 @@ const Home = () => {
             <div className="relative">
               <div className="rounded-[50%] h-[300px] w-[300px] overflow-hidden bg-[#682bb3] backdrop-blur-sm z-10">
                 <Image
-                  src={"/assets/krish.jpeg"}
-                  alt="krish-mungse"
+                  src={"/assets/Yashraj.webp"}
+                  alt="yashraj-jagtap"
                   height={500}
                   width={500}
                 />
@@ -111,21 +82,16 @@ const Home = () => {
 
               <ul className="list-disc space-y-4">
                 <li className="body-2 text-md">
-                  I&apos;m a results-driven{" "}
+                  I&apos;m a{" "}
                   <span className="text-gradient">
                     Full Stack Web Developer
                   </span>{" "}
-                  and passionate{" "}
-                  <span className="text-gradient">Competitive Programmer</span>,
-                  dedicated to creating robust and efficient solutions for
-                  real-world challenges. I am also proficient in a variety of
-                  front-end development technologies, using Modern frameworks.
+                  and Computer Engineering student based in Pune, Maharashtra. I specialize in building scalable web applications using React, Node.js, and MongoDB.
                 </li>
 
                 <li className="body-2 text-md">
-                  My mission is to{" "}
-                  <span className="text-gradient">design and develop</span> a
-                  website that you and your audience love.
+                  Experienced in{" "}
+                  <span className="text-gradient">VPS infrastructure, domain configuration, and secure production hosting</span>. I love turning complex problems into elegant, production-ready solutions.
                 </li>
               </ul>
             </div>
@@ -133,36 +99,39 @@ const Home = () => {
         </div>
       </Section>
 
+      <Section id="experience" crosses topBorder>
+        <div className="container mx-auto px-4 md:w-[90%]">
+          <Heading title="Experience" underline />
+          <div className="glass-effect p-8 my-8">
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h3 className="h5 text-gradient">Freelance Full Stack Developer</h3>
+                <p className="body-2 text-muted-foreground">Self-Employed</p>
+              </div>
+              <span className="tag">Oct 2025 – Present</span>
+            </div>
+            <ul className="list-disc list-inside space-y-2 font-thin text-sm">
+              <li>Developing a scalable **Zyntherraa E-commerce platform** using React, Node.js, and MongoDB with secure backend APIs.</li>
+              <li>Building backend services for authentication, product management, and order processing.</li>
+              <li>Managing production deployment on Linux VPS using NGINX and SSL configuration.</li>
+              <li>Built and deployed various custom web solutions, SaaS platforms, and scheduling tools for diverse clients.</li>
+              <li>Experienced in VPS infrastructure, domain configuration, and secure production hosting.</li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+
       {/* projects  */}
-      <Section crosses topBorder>
+      <Section id="projects" crosses topBorder>
         <div className="container mx-auto px-4 md:w-[90%]">
           <Heading title="Projects" underline />
           <BlurEffect />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center pb-20 my-8">
-            {projects.slice(0, 3).map((project, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pb-20 my-8">
+            {projects.map((project, idx) => (
               <ProjectCard
                 key={idx}
-                {...project}
-                className="w-full max-w-[300px]"
-              />
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center pb-20 my-8">
-            {projects.slice(3, 6).map((project, idx) => (
-              <ProjectCard
-                key={idx + 3}
-                {...project}
-                className="w-full max-w-[300px]"
-              />
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center pb-20 my-8">
-            {projects.slice(6, 9).map((project, idx) => (
-              <ProjectCard
-                key={idx + 6}
                 {...project}
                 className="w-full max-w-[300px]"
               />
@@ -172,7 +141,7 @@ const Home = () => {
       </Section>
 
       {/* skills  */}
-      <Section crosses topBorder>
+      <Section id="skills" crosses topBorder>
         <div className="container md:w-[90%] mx-auto">
           <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
             <Image
@@ -206,7 +175,7 @@ const Home = () => {
       </Section>
 
       {/* my strategy */}
-      <Section crosses topBorder>
+      <Section id="strategy" crosses topBorder>
         <div className="container sm:w-[90%] mx-auto">
           <Heading
             title="Quick and beautiful web design"
@@ -316,6 +285,52 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+
+      {/* connect */}
+      <Section id="connect" crosses topBorder>
+        <div className="container md:w-[90%] mx-auto">
+          <Heading
+            title="Let's Connect"
+            tag="Contact"
+            text="I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions."
+            underline
+          />
+
+          <div className="flex flex-wrap gap-8 justify-center py-10">
+            <a
+              href={`mailto:${siteConfig.links.email}`}
+              className="glass-effect p-6 flex flex-col items-center gap-4 hover:scale-105 transition-transform w-[300px]"
+            >
+              <IoMailOutline className="h-10 text-red-500 w-10" />
+              <span className="font-semibold text-foreground">Email</span>
+              <span className="text-sm font-thin text-foreground">{siteConfig.links.email}</span>
+            </a>
+
+            <a
+              href={siteConfig.links.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="glass-effect p-6 flex flex-col items-center gap-4 hover:scale-105 transition-transform w-[300px]"
+            >
+              <FaLinkedinIn className="h-10 text-blue-500 w-10" />
+              <span className="font-semibold text-foreground">LinkedIn</span>
+              <span className="text-sm font-thin text-foreground">yashraj-jagtap</span>
+            </a>
+
+            <a
+              href={siteConfig.links.github}
+              target="_blank"
+              rel="noreferrer"
+              className="glass-effect p-6 flex flex-col items-center gap-4 hover:scale-105 transition-transform w-[300px]"
+            >
+              <FaGithub className="h-10 w-10 text-foreground" />
+              <span className="font-semibold text-foreground">GitHub</span>
+              <span className="text-sm font-thin text-foreground">Yashraj9595</span>
+            </a>
           </div>
         </div>
       </Section>

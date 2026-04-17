@@ -8,16 +8,28 @@ interface ComponentConfig {
 export const navConfig: ComponentConfig = {
   mainNav: [
     {
-      title: "Components",
-      href: "/components",
+      title: "About",
+      href: "/#about",
     },
     {
-      title: "Shadcn",
-      href: "/components/shadcn",
+      title: "Experience",
+      href: "/#experience",
     },
     {
-      title: "Tailwindcss",
-      href: "/components/tailwindcss",
+      title: "Projects",
+      href: "/#projects",
+    },
+    {
+      title: "Skills",
+      href: "/#skills",
+    },
+    {
+      title: "Blogs",
+      href: "/blogs",
+    },
+    {
+      title: "Connect",
+      href: "/#connect",
     },
   ],
   sidebarNav: [

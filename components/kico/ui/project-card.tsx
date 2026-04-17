@@ -46,7 +46,7 @@ export const ProjectCard = ({
     <div
       className={cn(
         "transition-transform duration-300 hover:scale-105 hover:shadow-2xl group",
-        "md:flex even:md:translate-y-[7rem] p-[1px] rounded-[2.5rem] h-fit",
+        "p-[1px] rounded-[2.5rem] h-full",
         borderGradient ? "bg-conic-gradient" : "bg-stroke",
         className,
         "max-w-[350px]"

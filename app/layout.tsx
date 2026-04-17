@@ -10,8 +10,8 @@ import { SiteFooter } from "@/components/site-footer";
 import ThemeProvider from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "Krish Mungase",
-  description: "Krish Mungse Portfolio.",
+  title: "Yashraj Jagtap",
+  description: "Yashraj Jagtap Portfolio - Full Stack Web Developer.",
 };
 
 export default function RootLayout({

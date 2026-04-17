@@ -2,15 +2,17 @@ import { SectionBorder } from "@/components/icons/section-border";
 import { cn } from "@/lib/utils";
 
 type SectionProps = {
+  id?: string;
   crosses?: boolean;
   customPaddings?: string;
   topBorder?: boolean;
   children: React.ReactNode;
 };
 
-export const Section = ({ crosses, children, topBorder }: SectionProps) => {
+export const Section = ({ id, crosses, children, topBorder }: SectionProps) => {
   return (
     <div
+      id={id}
       className={cn("relative py-10 lg:py-16 xl:py-20 border-b md:border-none")}
     >
       {children}
